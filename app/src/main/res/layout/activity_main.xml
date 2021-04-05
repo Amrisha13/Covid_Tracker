@@ -8,6 +8,7 @@
 
     <!--Toolbar-->
     <RelativeLayout
+        android:id="@+id/toolbarRl"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorWhite">
@@ -36,16 +37,27 @@
 
     </RelativeLayout>
 
+    <!--framelayout: show fragments-->
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarRl"
+        android:layout_above="@+id/navigationView"/>
+
     <!--bottom navigationView-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="5dp"
+        android:alpha="?attr/actionBarSize"
         android:background="?android:attr/windowBackground"
-        app:itemIconSize="@android:dimen/app_icon_size"
+        android:theme="@style/myNavigationDrawerStyle"
+
         app:itemIconTint="@color/colorBlack"
+        app:itemTextColor="@color/colorPrimary"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_bottom" />
 
