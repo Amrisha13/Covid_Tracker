@@ -52,8 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"
-        android:alpha="?attr/actionBarSize"
-        android:background="?android:attr/windowBackground"
+        android:alpha="@android:integer/config_mediumAnimTime"
+        android:background="@color/colorWhite"
         android:theme="@style/myNavigationDrawerStyle"
 
         app:itemIconTint="@color/colorBlack"
