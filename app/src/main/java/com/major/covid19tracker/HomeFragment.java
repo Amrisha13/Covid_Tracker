@@ -9,12 +9,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 public class HomeFragment extends Fragment {
 
     Context context;
-
+    //UI views
+    private ProgressBar progressBar;
+    private TextView totalCasesTv, newCasesTv, totalDeathsTv,newDeathsTv,totalRecoveredTv;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -31,6 +35,13 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        //init UI Views
+        progressBar = view.findViewById(R.id.progressbar);
+        totalCasesTv = view.findViewById(R.id.totalCasesTv);
+        newCasesTv = view.findViewById(R.id.newCasesTv);
+        totalDeathsTv = view.findViewById(R.id.totalDeathsTv);
+        newDeathsTv = view.findViewById(R.id.newDeathsTv);
+        totalRecoveredTv = view.findViewById(R.id.totalRecoveredTv);
         return view;
     }
 }
