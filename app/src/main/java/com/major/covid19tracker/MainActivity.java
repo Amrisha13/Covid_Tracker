@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class    MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     //UI views
     private TextView titleTv;
@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //refresh button clicks, refresh records
         refreshBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                homeFragment.onResume();
 
             }
         });
