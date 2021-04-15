@@ -74,7 +74,7 @@ public class HomeFragment extends Fragment {
 
     private void loadHomeData(){
         //show progress
-        progressBar.setVisibility(View.GONE);
+        progressBar.setVisibility(View.VISIBLE);
 
         //JSON String Request
         StringRequest stringRequest = new StringRequest(Request.Method.GET, STATS_URL, new Response.Listener<String>() {
