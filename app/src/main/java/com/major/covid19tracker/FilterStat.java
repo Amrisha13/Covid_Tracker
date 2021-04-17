@@ -17,7 +17,7 @@ public class FilterStat extends Filter {
     protected FilterResults performFiltering(CharSequence constraint) {
         FilterResults results=new FilterResults();
         //check constraint validity
-        if(constraint!=null && constraint.length()>0){
+        if(constraint!=null && constraint.length() > 0){
             //change to uppercase
             constraint=constraint.toString().toUpperCase();
             //store our filtered records
@@ -43,6 +43,7 @@ public class FilterStat extends Filter {
     @Override
     protected void publishResults(CharSequence charSequence, FilterResults results) {
         adapter.statArrayList=(ArrayList<ModelStat>) results.values;
+        adapter.notifyDataSetChanged();
 
 
     }

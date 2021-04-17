@@ -64,7 +64,10 @@ public class AdapterStat extends RecyclerView.Adapter<AdapterStat.HolderStat> im
 
     @Override
     public Filter getFilter() {
-        return null;
+        if(filter==null){
+            filter=new FilterStat(this,filterList);
+        }
+        return filter;
     }
 
     //Viewholder class
